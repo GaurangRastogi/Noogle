@@ -122,9 +122,10 @@ function activate(context) {
           let panel = vscode.window.createWebviewPanel(
             "browser", // Identifies the type of the webview. Used internally
             "Stack-Solution", // Title of the panel displayed to the user
-            vscode.ViewColumn.One, // Editor column to show the new webview panel in.
+            vscode.ViewColumn.Two, // Editor column to show the new webview panel in.
             {
               enableScripts: true,
+              retainContextWhenHidden:true
             }
           );
           // Use XMLHttpRequest to fetch the HTML content of the website
