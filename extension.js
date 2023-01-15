@@ -121,7 +121,7 @@ function activate(context) {
           if(url!==""){
           let panel = vscode.window.createWebviewPanel(
             "browser", // Identifies the type of the webview. Used internally
-            "Stack-Solution", // Title of the panel displayed to the user
+            "Noogle's Solution", // Title of the panel displayed to the user
             vscode.ViewColumn.Two, // Editor column to show the new webview panel in.
             {
               enableScripts: true,
@@ -160,9 +160,10 @@ function activate(context) {
             context.subscriptions
           );
           }
+          else{
+            vscode.window.showInformationMessage("Noogle says you have no error");
+          }
         });
-        // Display a message box to the user
-        vscode.window.showInformationMessage("Hello World from Cody!");
       }
     }
   );
